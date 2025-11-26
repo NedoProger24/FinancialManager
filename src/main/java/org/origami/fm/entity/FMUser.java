@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "user_account")
-public class User {
+public class FMUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,6 +16,7 @@ public class User {
     private String role;
     @Column(name ="email")
     private String email;
+
 
     public Long getId() {
         return id;

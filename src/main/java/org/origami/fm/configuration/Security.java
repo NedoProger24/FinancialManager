@@ -18,7 +18,7 @@ public class Security {
                         // Публичные страницы (доступны всем)
                         .requestMatchers("/css/**", "/css/*.css", "/js/**", "/images/**", "/webjars/**", "/static/**").permitAll()
                         .requestMatchers("/", "/home", "/css/**", "/js/**", "/images/**").permitAll()
-                        .requestMatchers("/register", "/about","/login","/").permitAll()
+                        .requestMatchers("/registration", "/about","/login","/").permitAll()
 
                         // Страницы только для аутентифицированных пользователей
                         .requestMatchers("/profile", "/profile/**","/user/**").hasAnyRole("USER", "ADMIN")

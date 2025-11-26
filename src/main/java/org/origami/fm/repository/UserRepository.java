@@ -1,11 +1,10 @@
 package org.origami.fm.repository;
 
-import org.origami.fm.entity.User;
+import org.origami.fm.entity.FMUser;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserRepository {
-    public User save(User user) {
-        return user;
-    }
+public interface UserRepository extends JpaRepository<FMUser, String> {
+    FMUser findByUsername (String username);
 }

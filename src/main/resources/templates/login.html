@@ -23,9 +23,15 @@
                 <div th:if="${param.error}" class="error">
                     <label class="error-text">Неверный логин или пароль!</label>
                 </div>
-                <div style="display: flex;">
-                    <button class="flat-button" style="width: 55%; padding-right: 10%;" type="submit">Регистрация</button>
-                    <button class="flat-button" style="width: 45%;" type="submit">Войти</button>
+                <div class="centered-div">
+                    <a href="/login">
+                        <button class="flat-button" type="submit">Войти</button>
+                    </a>
+                </div>
+                <div class="centered-div">
+                    <a href="/registration">
+                        Регистрация
+                    </a>
                 </div>
                 <div th:if="${param.logout}" class="success">
                     <label>Вы успешно вышли из системы</label>
